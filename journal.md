@@ -21,9 +21,8 @@ triangle(40,100,40,75,80,100);
 
 triangle(40,75,80,100,80,75);
 
-# this is my journal
     Feb 6th, 2020
 
-1. What did we do?
-2. What did you learn?
-3. What question do you want to ask?
+1. What did we do? - We did a few commands on how to create different shapes and line between them, as well as how to randomize/make shapes appear as we want, or under a certain amount of time.
+2. What did you learn? - I learned that attention to details is very important when doing commands, and that you can modify shapes, their sizes, colors, lines between the shapes.
+3. What question do you want to ask? - I would like to ask how we can modify the amount of circles to our own command ( like rolling a dice randomly, but the shapes get in a designated place).
