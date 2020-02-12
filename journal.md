@@ -23,6 +23,6 @@ triangle(40,75,80,100,80,75);
 3. What question do you want to ask? - I would like to ask how we can modify the amount of circles to our own command, like rolling a dice randomly, but the shapes get in a designated place.
 # This is my journal
     Feb 10th, 2020
-1. What did we do?
-2. What did you learn?
-3. What question do you want to ask?
+1. What did we do? - We created random amounts of shapes on a designated location, rendering it possible to make a dice and randomize it. We also learned about chance bias, basically making one number more likely to appear than another. We played a game where we had to guess it.
+2. What did you learn? - We learned about utilizing the random command to randomize the number of circles but also giving a location to make the circles stay in 1 designed place. We learned about how to make the probability of making 1 number more likely to appear than others.
+3. What question do you want to ask? I would like to ask about how to fill color only to the shapes that I want to, for example only filling the circles inside the square but not the square itself.
