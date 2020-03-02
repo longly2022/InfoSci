@@ -31,3 +31,5 @@ void loop()
 
 The image of the circuit is shown in Fig. 1
 
+
+Fig. 1 Circuit used for the traffic light
