@@ -26,3 +26,21 @@ triangle(40,75,80,100,80,75);
 1. What did we do? - We created random amounts of shapes on a designated location, rendering it possible to make a dice and randomize it. We also learned about chance bias, basically making one number more likely to appear than another. We played a game where we had to guess it.
 2. What did you learn? - We learned about utilizing the random command to randomize the number of circles but also giving a location to make the circles stay in 1 designed place. We learned about how to make the probability of making 1 number more likely to appear than others.
 3. What question do you want to ask? I would like to ask about how to fill color only to the shapes that I want to, for example only filling the circles inside the square but not the square itself.
+
+# This is my journal
+    Feb 20th, 2020
+1. What did we do? - We did a checkerboard pattern and made the squares move so that it could create an illusion. We made our own illusion as homework.
+2. What did you learn? - I learned about how to use the command offset to repeat certain alterations in python.
+3. What questions do you have? - I would like to ask what the global command is for.
+
+# This is my journal
+    Feb 27th, 2020
+1. What did we do? - We showcased our illusions done for homework and made a slideshow about who created the illusion and what makes it an illusion.
+2. What did you learn? - I learned about an illusion where the human eye compares relative size of object, therefore certain objects look bigger next to smaller rather than bigger objects.
+3. What questions do you have? No comment?
+
+# This is my journal
+    March 2nd, 2020
+1. What did we do? - We used tinkercad to create a theoretical model of red, green and blue light. We also did coding in order to make the model work.
+2. What did you learn? - I learned how to use the delay command so that each light goes off after another like a domino effect.
+3. What questions do you have? - I am still oblivious about what most of the objects presented in tinkercad are and their uses, so I would like an explanation of what they are.
