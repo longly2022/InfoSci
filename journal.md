@@ -7,7 +7,7 @@
 
 #solution to the homework
 
-Here I solved the code challenge
+Here I solved the code challenge:
 ```.py
 triangle(0,0,40,0,0,50);
 triangle(40,50,40,0,0,50);
@@ -44,3 +44,78 @@ triangle(40,75,80,100,80,75);
 1. What did we do? - We used tinkercad to create a theoretical model of red, green and blue light. We also did coding in order to make the model work.
 2. What did you learn? - I learned how to use the delay command so that each light goes off after another like a domino effect.
 3. What questions do you have? - I am still oblivious about what most of the objects presented in tinkercad are and their uses, so I would like an explanation of what they are.
+
+# This is my journal
+    April 4th, 2020
+1. What did we do? - We used a circle to demonstrate a person's location and showed the person's movement by using commands to move it around the background. We also created restrictions for the person so that he wouldn't go away from the screen.
+2. What did you learn? - I learned how to program to display an individual's location and their movements, specifically using a circle to demonstrate the location and changing the locations randomly to see movement.
+3. What questions do you have?
+
+#solution for the 2 tasks
+
+here I solved the code challenges: 
+1.
+```.py
+#define variables
+posx = 300
+posy = 300
+
+def setup():
+    size (600, 600)
+    
+def draw():
+    global posx, posy
+    background (255)
+    strokeWeight (2)
+    
+    #create individual
+    circle (posx, posy, 40)
+    posx = posx + random (-10,0)
+    posy = posy + random (-10,0)
+    
+    #boundaries conditions
+    if posx>580:
+        posx=580
+    if posy>580:
+        posy=580
+    if posx<20:
+        posx=20
+    if posy<20:
+        posy=20
+        
+    delay(100)
+```
+2.
+```.py
+#definition of variables
+x = []
+y = []
+
+def setup():
+    size (600, 600)
+    for i in range(10):
+        x.append(random(0,600))
+        y.append(random(0,600))
+def draw():
+    global x, y
+    background (255)
+    strokeWeight (2)
+    
+    #create individuals
+    for i in range(10):
+        circle (x[i], y[i], 40)
+        x[i] = x[i] + random (-10,10)
+        y[i] = y[i] + random (-10,10)
+    
+        #boundaries conditions
+        if x[i]>580:
+            x[i]=580
+        if y[i]>580:
+            y[i]=580
+        if x[i]<20:
+            x[i]=20
+        if y[i]<20:
+            y[i]=20
+        
+    delay(100)
+```
