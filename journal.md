@@ -51,7 +51,7 @@ triangle(40,75,80,100,80,75);
 2. What did you learn? - I learned how to program to display an individual's location and their movements, specifically using a circle to demonstrate the location and changing the locations randomly to see movement.
 3. What questions do you have?
 
-#solution for the 2 tasks
+    solution for the 2 tasks
 
 here I solved the code challenges: 
 1.
@@ -118,4 +118,50 @@ def draw():
             y[i]=20
         
     delay(100)
+```
+# This is my journal
+    Apr. 15th, 2020
+1. How is the e-learning format working for you in our class? - Apart from the fact that I find it hard to figure out the commands on my own, the format is good, including the instructions.
+2. is the load sufficient/overwhelming? - I've had not much trouble with the workload up until now, so I'd say it's sufficient.
+3. is the format of the video tutorials working? - The video tutorials are working well, however with creating the bar graph and entirely new commands as such, I would suggest that you hint at the research we need to do.
+4. Are the meetings meaningful? - The meetings up until now have not been particularly meaningful because what is said in the meeting is already in the online tasks.
+
+    Solution for the tasks:
+Here i solved some of the code challenges:
+1.
+```.py
+x = ["bears"]
+c = 0
+
+def draw():
+    global x
+for i in range(100):
+    c=c+1
+    print c, "bears"
+if c == 1:
+    print c, "bear"
+```
+2.
+```.py
+x = ["the year is"]
+c = 1899
+
+def draw():
+    global x
+for i in range(100):
+    c=c+1
+    print "the year is", c
+```
+3.
+```.py
+x = ["the year is"]
+c = -1
+f = 0
+
+def draw():
+    global x
+for i in range(101):
+    c=c+1
+    f = c*9/5 + 32
+    print c, "C are", f, "F"
 ```
