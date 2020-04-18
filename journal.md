@@ -165,3 +165,90 @@ for i in range(101):
     f = c*9/5 + 32
     print c, "C are", f, "F"
 ```
+4.
+```.py
+#definition of variables
+x = [100,200]
+y = [100,250]
+h = [False, True] #False = infected
+r = 0
+e = 22
+f = 0
+bar = 0
+
+def setup():
+    size (600, 600)
+    #create random individuals
+    for n in range(20):
+        x.append(random(0,600))
+        y.append(random(0,600))
+        h.append(True) #All healthy 
+        barGraph()
+        
+def distance(x1,x2,y1,y2):
+    a = (x1-x2)
+    b = (y1-y2)
+    c = sqrt(a**2+b**2)
+    return c
+
+def draw():
+    global x, y, h, r, e, f, bar
+    background (255)
+    strokeWeight (2)
+    barGraph()
+    r == 1
+    if r == 22:
+        e == 1
+    
+    #ahow the individuals
+    for ind in range(len(x)):
+        if h[ind]==True:
+            fill(255) #healthy
+        else:
+            fill(255,0,0) #infected 
+        circle (x[ind], y[ind], 40)
+        #calculate the distance to ach neighbour
+        for nei in range (len(x)):
+            if nei == ind:
+                continue
+            d = distance(x[ind], x[nei], y[ind], y[nei])
+            if d< 40 and (h[nei] == False or h[ind] == False):
+                h[ind] = False
+                h[nei] = False
+                            
+        for m in range (22):
+            x[m] = x[m] + random (-10,10)
+            y[m] = y[m] + random (-10,10)
+    
+        #boundaries conditions
+            if x[m]>580: 
+                x[m]=580
+            if y[m]>580:
+                y[m]=580
+            if x[m]<20:
+                x[m]=20
+            if y[m]<20:
+                y[m]=20
+    delay(100)
+    
+    r = 0
+    e = 22
+    for bar in range(22):
+        if h[bar] == False:
+            r +=1
+            e -=1
+    textSize (20)
+    fill (0)
+    text ("Infected", 510, 540)
+    text ("Healthy", 510, 520)
+    text (e, 430, 520)
+    text (r, 430, 540)
+
+def barGraph():
+    strokeWeight (2)
+    stroke (0)
+    fill (255, 0, 0)
+    rect (500, 530, -r*2, 10)
+    fill (255)
+    rect (500, 510, -e*2, 10)
+```
