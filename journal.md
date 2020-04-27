@@ -252,3 +252,144 @@ def barGraph():
     fill (255)
     rect (500, 510, -e*2, 10)
 ```
+
+# This is my journal
+    Apr 27th, 2020
+1. What did we do?
+2. What did you learn?
+3. What questions do you have?
+
+Here is my solution for this week's task:
+```.py
+# definition of variables
+x = []
+y= []
+per = ["Sick", "Healthy"] #Sick=>infected
+inf = 0
+hel = 25
+rec = 0
+con = 0
+bar = 0
+days = [200, -1]
+
+def setup():
+    size(500,500)
+    for n in range (25):
+        x.append(random(0, 500))
+        per.append("Healthy") #All Healthy
+        y.append(random(0, 500))
+        days.append(200)
+        barGraph()
+        
+
+        
+def distance(x1, x2, y1, y2):
+    a = (x1 - x2)
+    b = (y1 - y2)
+    c = sqrt(a**2 + b**2)
+    return c
+
+
+    
+    
+def draw():
+    global x, y, inf, hel, con, l, days, rec
+    background(255)
+    strokeWeight(2)
+    barGraph()
+    con += 1
+    if inf == 25:
+        con -= 1
+
+
+    
+    #create 1st individual
+    for i in range(len(x)):
+        if per[i] == "Healthy":
+            fill(255) #healthy
+        elif per[i] == "Recovered":
+            fill(0,255,255)
+        else:
+            fill (0, 200, 0) #infected
+                
+        if per[i] == "Sick":
+            days[i] -= 1
+            if days[i] == 0:
+                per[i] = "Recovered"
+
+            
+            
+        circle(x[i], y[i], 40)
+        
+        x[i] = x[i] + random(-10, 10)
+        y[i] = y[i] + random(-10, 10)
+
+        
+        for g in range(len(x)):
+            if g == i:
+                continue
+            d = distance(x[i], x[g], y[i], y[g])
+            if d < 40 and (per[g] == "Sick" or per[i]== "Sick"):
+                if per[i] == "Healthy":
+                    #infection happens
+                    per[i] = "Sick"
+                    days[i] = 200
+                if per[g] == "Healthy":        
+                    per[g] = "Sick"
+                    days[g] = 200
+
+        
+        #boundaries conditions
+        if x[i] > 500:
+            x[i] = 500
+    
+        # add three more extentions
+        
+        if x[i] < 0:
+            x[i] = 0
+            
+        if y[i] > 500:
+            y[i] = 500
+    
+        if y[i] < 0:
+            y[i] = 0
+            
+            
+
+            
+    inf = 0
+    hel = 0
+    rec = 0
+    for bar in range (len(x)):
+        if per[bar] == "Sick":
+            inf += 1
+        elif per[bar] == "Healthy":
+            hel += 1
+        elif per[bar] == "Recovered":
+            rec += 1
+
+            
+
+            
+            
+    textSize(10)
+    fill(0)
+    text("Infected", 445, 478)
+    text("Healthy", 445, 458)
+    text ("Recovered", 445, 496)
+    text (con, 80, 470)
+    text("Iteration #:", 20, 470)
+
+            
+    
+
+def barGraph():
+    strokeWeight(1)
+    stroke(0)
+    fill(255, 0, 0)
+    rect (440, 469, -inf*2, 10)
+    fill (255)
+    rect (440, 450, -hel*2, 10) 
+    fill (0, 255, 255)
+    rect (440, 488, -rec*2, 10) 
+```
